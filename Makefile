@@ -1,4 +1,4 @@
-MOD_NAME := github.com/opensraph/template
+MOD_NAME := github.com/opensraph/template.go
 
 # Git variables
 GIT_COMMIT    = $(shell git rev-parse HEAD)

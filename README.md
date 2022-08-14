@@ -1,6 +1,6 @@
 # template.go
 
-[![CI](https://github.com/opensraph/template/actions/workflows/ci.yml/badge.svg)](https://github.com/opensraph/template/actions/workflows/ci.yml)
+[![ci](https://github.com/opensraph/template.go/actions/workflows/ci.yml/badge.svg)](https://github.com/opensraph/template.go/actions/workflows/ci.yml)
 
 >  Repository Template for Go Project
 
@@ -24,7 +24,7 @@
 ## 安装说明 | Installation
 
 ```bash
-go get github.com/opensraph/template
+go get github.com/opensraph/template.go
 ```
 
 ## 使用说明 | Usage
@@ -44,7 +44,7 @@ go get github.com/opensraph/template
 
 ## 更新日志 | Changelog
 
-[![Releases](https://github.com/opensraph/template/actions/workflows/releases.yml/badge.svg)](https://github.com/opensraph/template/releases)
+[![Releases](https://github.com/opensraph/template.go/actions/workflows/releases.yml/badge.svg)](https://github.com/opensraph/template.go/releases)
 
 ## 版权文件 | License
 

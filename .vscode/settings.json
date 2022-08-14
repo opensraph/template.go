@@ -1,5 +1,5 @@
 {
     "gopls": {
-        "formatting.local": "github.com/opensraph/template"
+        "formatting.local": "github.com/opensraph/template.go"
     },
 }
