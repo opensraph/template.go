@@ -44,7 +44,7 @@ go get github.com/opensraph/template.go
 
 ## 更新日志 | Changelog
 
-[![Releases](https://github.com/opensraph/template.go/actions/workflows/releases.yml/badge.svg)](https://github.com/opensraph/template.go/releases)
+[![release](https://github.com/opensraph/template.go/actions/workflows/release.yml/badge.svg)](https://github.com/opensraph/template.go/releases)
 
 ## 版权文件 | License
 
