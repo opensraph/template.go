@@ -6,7 +6,7 @@ builds:
 before:
   hooks:
     - |
-      sh - c '
+      sh -c '
         if [ -z "{{ .Tag }}" ]; then
           echo "No tag found. Skipping version update."
           exit 0
