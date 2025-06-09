@@ -26,8 +26,9 @@ RESET := \033[0m
 .PHONY: init
 init: ## Initialize development environment
 	@echo "$(BLUE)Installing development tools...$(RESET)"
+	$(GO) install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
+	$(GO) install golang.org/x/tools/cmd/goimports@latest
 	$(GO) install github.com/goreleaser/goreleaser/v2@latest
-	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(GOPATH)/bin
 	@echo "$(GREEN)Development environment initialized!$(RESET)"
 
 .PHONY: deps
