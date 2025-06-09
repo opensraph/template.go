@@ -3,7 +3,7 @@ name: release
 on:
   push:
     tags:
-      - v*
+      - "v*"
 
 permissions:
   contents: write
@@ -31,6 +31,19 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
+
+      - name: Create release branch and Update version.go
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "Creating release branch for version $VERSION"
+          git checkout -b "release:$VERSION"
+          echo "Updating version.go to $VERSION"
+          sed -i "s/const Version = \".*\"/const Version = \"$VERSION\"/" ./version/version.go
+          git add ./version/version.go
+          git commit -m "chore: update version to $VERSION"
+          git push origin "release:$VERSION"
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v1
