@@ -183,7 +183,7 @@ install: ## Install binary to GOPATH/bin
 release: ## Create release with goreleaser
 	@ $(MAKE) --no-print-directory log-$@
 	@if command -v goreleaser >/dev/null 2>&1; then \
-		goreleaser release --rm-dist; \
+		goreleaser release --clean; \
 	else \
 		echo "$(RED)goreleaser not found. Run 'make init' first.$(RESET)"; \
 		exit 1; \
