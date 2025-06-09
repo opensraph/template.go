@@ -45,7 +45,8 @@ jobs:
           VERSION=$(git describe --tags --abbrev=0)
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b "release/${VERSION}"
+          git checkout -b "release/${VERSION}" || git checkout "release/${VERSION}"
           git add version/version.go
           git commit -m "chore: update version to ${VERSION}" || echo "No changes to commit"
+          git pull --rebase origin "release/${VERSION}" || true
           git push origin "release/${VERSION}"
