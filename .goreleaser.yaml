@@ -1,5 +1,8 @@
 version: 2
 
+builds:
+  - skip: true
+
 before:
   hooks:
     - sh -c 'VERSION=${GORELEASER_CURRENT_TAG:-dev}; sed -i "s/var Version = \".*\"/var Version = \"${VERSION}\"/" version/version.go'
