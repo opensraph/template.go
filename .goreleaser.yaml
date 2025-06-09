@@ -2,8 +2,7 @@ version: 2
 
 before:
   hooks:
-    - VERSION=${GORELEASER_CURRENT_TAG:-dev}
-    - sed -i "s/var Version = \".*\"/var Version = \"${VERSION}\"/" version/version.go
+    - sh -c 'VERSION=${GORELEASER_CURRENT_TAG:-dev}; sed -i "s/var Version = \".*\"/var Version = \"${VERSION}\"/" version/version.go'
 
 changelog:
   use: github
