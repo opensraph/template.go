@@ -40,7 +40,7 @@ jobs:
           echo "Creating release branch for version $VERSION"
           git checkout -b "release/$VERSION"
           echo "Updating version.go to $VERSION"
-          sed -i "s/const Version = \".*\"/const Version = \"$VERSION\"/" ./version/version.go
+          sed -i "s/var Version = \".*\"/var Version = \"$VERSION\"/" ./version/version.go
           git add ./version/version.go
           git commit -m "chore: update version to $VERSION"
           git push origin "release/$VERSION"
